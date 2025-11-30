@@ -229,11 +229,22 @@
         }
 
         .sectionContent.active {
-            max-height: 20000px; /* Incrementado para garantizar que todo el contenido se muestre */
+            max-height: 20000px;
         }
 
         .itemList {
             padding: 20px 30px;
+        }
+
+        /* ESTILO PARA LOS SUBTÍTULOS DENTRO DEL CONTENIDO */
+        .subHeader {
+            padding: 10px 0;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-size: 1.1em;
+            color: var(--verde-lima);
+            border-bottom: 1px solid rgba(196, 214, 0, 0.3);
         }
 
         .item {
@@ -253,7 +264,7 @@
         }
 
         .item:hover {
-            background: #195249; /* Tono intermedio al pasar el ratón */
+            background: #195249;
             transform: translateX(5px);
         }
 
@@ -276,21 +287,9 @@
             transform: scale(1.2);
         }
 
-        /* COLORES DE ESTADO */
-        .statusIndicator.green {
-            background: #48bb78; /* Completo */
-            border-color: #48bb78;
-        }
-
-        .statusIndicator.yellow {
-            background: #ecc94b; /* En proceso */
-            border-color: #ecc94b;
-        }
-
-        .statusIndicator.red {
-            background: var(--error); /* Pendiente */
-            border-color: var(--error);
-        }
+        .statusIndicator.green { background: #48bb78; border-color: #48bb78; }
+        .statusIndicator.yellow { background: #ecc94b; border-color: #ecc94b; }
+        .statusIndicator.red { background: var(--error); border-color: var(--error); }
 
         .itemCode {
             font-weight: bold;
@@ -324,8 +323,6 @@
             color: var(--texto-claro);
             cursor: default;
         }
-
-        /* ELIMINADA LA SECCIÓN LEGEND COMPLETA */
 
         @media (max-width: 768px) {
             header, .searchBar, .container {
@@ -654,6 +651,7 @@
                 </div>
                 <div class="sectionContent">
                     <div class="itemList">
+                        <div class="subHeader">HABITACIONES</div>
                         <div class="item" data-name="Equipamiento de habitaciones"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">SA-1-1</span><span class="itemName">SA-1-1: Equipamiento de habitaciones</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
                         <div class="item" data-name="Espejos, mueble para maletero"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">SA-1-2</span><span class="itemName">SA-1-2: Espejos, mueble para maletero</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
                         <div class="item" data-name="Sillas, escritorios, mobiliario balcones"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">SA-1-3</span><span class="itemName">SA-1-3: Sillas, escritorios, mobiliario balcones</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
@@ -672,16 +670,24 @@
                         <div class="item" data-name="CCTV"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">SA-1-16</span><span class="itemName">SA-1-16: CCTV</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
                         <div class="item" data-name="Cortinas mecanismos"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">SA-1-17</span><span class="itemName">SA-1-17: Cortinas mecanismos</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
                         <div class="item" data-name="Lamparas / Iluminacion"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">SA-1-18</span><span class="itemName">SA-1-18: Lamparas / Iluminacion</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
+                        
+                        <div class="subHeader">ALIMENTOS Y BEBIDAS Y COCINA</div>
                         <div class="item" data-name="SCI (A&B y Cocina)"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">SA-1-19</span><span class="itemName">SA-1-19: SCI (A&B y Cocina)</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
                         <div class="item" data-name="Instalaciones de gas (A&B y Cocina)"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">SA-1-20</span><span class="itemName">SA-1-20: Instalaciones de gas (A&B y Cocina)</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
+                        
+                        <div class="subHeader">FRONT, LOBBY Y OFICINAS</div>
                         <div class="item" data-name="Accesos / Puertas / Iluminacion (Front/Lobby)"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">SA-1-21</span><span class="itemName">SA-1-21: Accesos / Puertas / Iluminacion (Front/Lobby)</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
                         <div class="item" data-name="Listado de equipo de transporte"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">SA-1-22</span><span class="itemName">SA-1-22: Listado de equipo de transporte</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
                         <div class="item" data-name="Telefonos / Conmutador"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">SA-1-23</span><span class="itemName">SA-1-23: Telefonos / Conmutador</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
                         <div class="item" data-name="Señaletica anuncios"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">SA-1-24</span><span class="itemName">SA-1-24: Señaletica anuncios</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
+                        
+                        <div class="subHeader">AREAS PUBLICAS</div>
                         <div class="item" data-name="HVAC - Areas Comunes"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">SA-1-25</span><span class="itemName">SA-1-25: HVAC - Areas Comunes</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
                         <div class="item" data-name="Comedor empleados"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">SA-1-26</span><span class="itemName">SA-1-26: Comedor empleados</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
                         <div class="item" data-name="Baños Empleados"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">SA-1-27</span><span class="itemName">SA-1-27: Baños Empleados</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
                         <div class="item" data-name="Oficinas"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">SA-1-28</span><span class="itemName">SA-1-28: Oficinas</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
+                        
+                        <div class="subHeader">ALBERCA</div>
                         <div class="item" data-name="Bomba de alberca / Antibortex / iluminación"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">SA-1-29</span><span class="itemName">SA-1-29: Bomba de alberca / Antibortex / iluminación</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
                         <div class="item" data-name="Sillas, camastros, sombrillas, mesas"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">SA-1-30</span><span class="itemName">SA-1-30: Sillas, camastros, sombrillas, mesas</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
                         <div class="item" data-name="Calentador de alberca, cuarto de máquinas alberca"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">SA-1-31</span><span class="itemName">SA-1-31: Calentador de alberca, cuarto de máquinas alberca</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
@@ -689,18 +695,26 @@
                         <div class="item" data-name="Telefono Emergencia"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">SA-1-33</span><span class="itemName">SA-1-33: Telefono Emergencia</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
                         <div class="item" data-name="Equipamiento de salvavidas Gancho / Flotador / camilla"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">SA-1-34</span><span class="itemName">SA-1-34: Equipamiento de salvavidas Gancho / Flotador / camilla</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
                         <div class="item" data-name="Estado fisico de acabado de la alberca veneciano / Pintura"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">SA-1-35</span><span class="itemName">SA-1-35: Estado fisico de acabado de la alberca veneciano / Pintura</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
-                        <div class="item" data-name="Iluminacion (Salones Eventos)"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">SA-1-36</span><span class="itemName">SA-1-36: Iluminacion (Salones Eventos)</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
+                        
+                        <div class="subHeader">SALONES EVENTOS</div>
+                        <div class="item" data-name="Iluminacion"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">SA-1-36</span><span class="itemName">SA-1-36: Iluminacion</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
                         <div class="item" data-name="Proyeccion"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">SA-1-37</span><span class="itemName">SA-1-37: Proyeccion</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
                         <div class="item" data-name="Mamparas"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">SA-1-38</span><span class="itemName">SA-1-38: Mamparas</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
+                        
+                        <div class="subHeader">LAVANDERIA</div>
                         <div class="item" data-name="Equipos de lavado"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">SA-1-39</span><span class="itemName">SA-1-39: Equipos de lavado</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
                         <div class="item" data-name="Equipos de planchado"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">SA-1-40</span><span class="itemName">SA-1-40: Equipos de planchado</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
                         <div class="item" data-name="Equipos de secado"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">SA-1-41</span><span class="itemName">SA-1-41: Equipos de secado</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
                         <div class="item" data-name="Hvac (Lavandería)"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">SA-1-42</span><span class="itemName">SA-1-42: Hvac (Lavandería)</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
+                        
+                        <div class="subHeader">GIMNASIO</div>
                         <div class="item" data-name="Equipos (Gimnasio)"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">SA-1-43</span><span class="itemName">SA-1-43: Equipos (Gimnasio)</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
                         <div class="item" data-name="Suelo (Gimnasio)"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">SA-1-44</span><span class="itemName">SA-1-44: Suelo (Gimnasio)</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
                         <div class="item" data-name="Hidratacion (Gimnasio)"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">SA-1-45</span><span class="itemName">SA-1-45: Hidratacion (Gimnasio)</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
                         <div class="item" data-name="Control de acceso (Gimnasio)"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">SA-1-46</span><span class="itemName">SA-1-46: Control de acceso (Gimnasio)</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
                         <div class="item" data-name="Hvac (Gimnasio)"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">SA-1-47</span><span class="itemName">SA-1-47: Hvac (Gimnasio)</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
+
+                        <div class="subHeader">RESTO DE ACTIVOS (General y Sistemas Mayores)</div>
                         <div class="item" data-name="Lamparas / Exteriores y pasillos"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">SA-1-48</span><span class="itemName">SA-1-48: Lamparas / Exteriores y pasillos</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
                         <div class="item" data-name="Transformadores"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">SA-1-49</span><span class="itemName">SA-1-49: Transformadores</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
                         <div class="item" data-name="Tablero principal"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">SA-1-50</span><span class="itemName">SA-1-50: Tablero principal</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
@@ -742,6 +756,8 @@
                         <div class="item" data-name="Fachadas / Sellos de ventanas / estado de pintura"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">SA-1-86</span><span class="itemName">SA-1-86: Fachadas / Sellos de ventanas / estado de pintura</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
                         <div class="item" data-name="Estacionamiento"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">SA-1-87</span><span class="itemName">SA-1-87: Estacionamiento</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
                         <div class="item" data-name="Reloj checador"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">SA-1-88</span><span class="itemName">SA-1-88: Reloj checador</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
+                        
+                        <div class="subHeader">MANTENIMIENTOS Y SEGURIDAD (Procesos)</div>
                         <div class="item" data-name="Bitácoras generales de mtto del hotel"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">SA-1-89</span><span class="itemName">SA-1-89: Bitácoras generales de mtto del hotel</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
                         <div class="item" data-name="Calendario anual y mensual de limpieza de campanas y extractor"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">SA-1-90</span><span class="itemName">SA-1-90: Calendario anual y mensual de limpieza de campanas y extractor</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
                         <div class="item" data-name="Calendario mantenimiento sistema Anssul"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">SA-1-91</span><span class="itemName">SA-1-91: Calendario mantenimiento sistema Anssul</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
@@ -859,7 +875,10 @@
                 </div>
                 <div class="sectionContent">
                     <div class="itemList">
+                        <div class="subHeader">CONTRATO DE FRANQUICIA</div>
                         <div class="item" data-name="Relación de conceptos de pagos pendientes a la marca."><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">LE-1-1</span><span class="itemName">LE-1-1: Relación de conceptos de pagos pendientes a la marca.</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
+                        
+                        <div class="subHeader">CONTRATOS DE ARRENDAMIENTOS Y SERVICIOS</div>
                         <div class="item" data-name="Locales comerciales (arrendamiento de espacios no hoteleros)"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">LE-2-1</span><span class="itemName">LE-2-1: Locales comerciales (arrendamiento de espacios no hoteleros)</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
                         <div class="item" data-name="Análisis de rentas pendientes"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">LE-2-2</span><span class="itemName">LE-2-2: Análisis de rentas pendientes</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
                         <div class="item" data-name="Contrato recolección de basura"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">LE-2-3</span><span class="itemName">LE-2-3: Contrato recolección de basura</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
@@ -869,7 +888,11 @@
                         <div class="item" data-name="Contrato tv cable"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">LE-2-7</span><span class="itemName">LE-2-7: Contrato tv cable</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
                         <div class="item" data-name="Contratos salones eventos posteriores"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">LE-2-8</span><span class="itemName">LE-2-8: Contratos salones eventos posteriores</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
                         <div class="item" data-name="Otros contratos"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">LE-2-9</span><span class="itemName">LE-2-9: Otros contratos</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
+
+                        <div class="subHeader">CONTRATO DE OPERACIÓN</div>
                         <div class="item" data-name="Contrato de Gestión Hotelera"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">LE-3-1</span><span class="itemName">LE-3-1: Contrato de Gestión Hotelera</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
+
+                        <div class="subHeader">LICENCIAS Y PERMISOS DE OPERACIÓN</div>
                         <div class="item" data-name="Anuencia Municipal de Alcoholes"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">LE-4-1</span><span class="itemName">LE-4-1: Anuencia Municipal de Alcoholes</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
                         <div class="item" data-name="Licencia Estatal de Alcoholes"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">LE-4-2</span><span class="itemName">LE-4-2: Licencia Estatal de Alcoholes</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
                         <div class="item" data-name="Programa Interno de Protección Civil"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">LE-4-3</span><span class="itemName">LE-4-3: Programa Interno de Protección Civil</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
@@ -898,6 +921,8 @@
                         <div class="item" data-name="Sociedad de Autores y Compositores de Mexico / Sociedad de Autores y Compositores"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">LE-4-26</span><span class="itemName">LE-4-26: Sociedad de Autores y Compositores de Mexico / Sociedad de Autores y Compositores</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
                         <div class="item" data-name="Placas y licencias de camionetas"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">LE-4-27</span><span class="itemName">LE-4-27: Placas y licencias de camionetas</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
                         <div class="item" data-name="Predial"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">LE-4-28</span><span class="itemName">LE-4-28: Predial</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
+
+                        <div class="subHeader">DICTÁMENES</div>
                         <div class="item" data-name="Dictamen de impacto vial"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">LE-5-1</span><span class="itemName">LE-5-1: Dictamen de impacto vial</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
                         <div class="item" data-name="Dictamen estructural"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">LE-5-2</span><span class="itemName">LE-5-2: Dictamen estructural</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
                         <div class="item" data-name="Dictamen de gas"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">LE-5-3</span><span class="itemName">LE-5-3: Dictamen de gas</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
@@ -907,6 +932,8 @@
                         <div class="item" data-name="Status de drenaje común"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">LE-5-7</span><span class="itemName">LE-5-7: Status de drenaje común</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
                         <div class="item" data-name="Funcionamiento de cisternas"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">LE-5-8</span><span class="itemName">LE-5-8: Funcionamiento de cisternas</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
                         <div class="item" data-name="Escaleras de emergencia"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">LE-5-9</span><span class="itemName">LE-5-9: Escaleras de emergencia</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
+
+                        <div class="subHeader">OTROS ASUNTOS LEGALES</div>
                         <div class="item" data-name="Status de Litigios Laborales"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">LE-6-1</span><span class="itemName">LE-6-1: Status de Litigios Laborales</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
                         <div class="item" data-name="Status de Inspecciones y/ó Procedimientos Administrativos"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">LE-6-2</span><span class="itemName">LE-6-2: Status de Inspecciones y/ó Procedimientos Administrativos</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
                         <div class="item" data-name="Contingencias/Reclamaciones"><div class="statusIndicator" onclick="cycleStatus(this)"></div><span class="itemCode">LE-6-3</span><span class="itemName">LE-6-3: Contingencias/Reclamaciones</span><a href="#" target="_blank" class="itemLink">Abrir</a></div>
